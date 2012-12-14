@@ -45,11 +45,6 @@
         </dependency>
         <dependency>
             <groupId>com.caucho</groupId>
-            <artifactId>hessian</artifactId>
-            <version>4.0.7</version>
-        </dependency>
-        <dependency>
-            <groupId>com.caucho</groupId>
             <artifactId>resin</artifactId>
             <version>4.0.30</version>
         </dependency>
@@ -84,6 +79,13 @@
                         <goals>
                             <goal>shade</goal>
                         </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.caucho.quercus.Quercus</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

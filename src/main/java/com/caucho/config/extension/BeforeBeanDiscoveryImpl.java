@@ -87,4 +87,8 @@ public class BeforeBeanDiscoveryImpl implements BeforeBeanDiscovery
     public void addInterceptorBinding(Class<? extends Annotation> type) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
+
+    public void addInterceptorBinding(Class<? extends Annotation> type, Annotation... antns) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }
